@@ -17,6 +17,11 @@
     <input id="newQuoteCategory" type="text" placeholder="Enter quote category" />
     <button onclick="addQuote()">Add Quote</button>
   </div>
+  <div id="conflictResolutionModal" style="display: none;">
+    <p>A conflict has been detected. Would you like to keep the local version or the server version?</p>
+    <button onclick="keepLocalVersion()">Keep Local</button>
+    <button onclick="keepServerVersion()">Keep Server</button>
+  </div>  
   <script src="script.js"></script>
 </body>
 </html>
