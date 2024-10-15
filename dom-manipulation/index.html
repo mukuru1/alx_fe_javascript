@@ -6,22 +6,9 @@
   <title>Dynamic Quote Generator</title>
 </head>
 <body>
-  <button id="exportJson">Export Quotes as JSON</button>
-  <input type="file" id="importFile" accept=".json" onchange="importFromJsonFile(event)" />
   <h1>Dynamic Quote Generator</h1>
   <div id="quoteDisplay"></div>
   <button id="newQuote">Show New Quote</button>
-  <h2>Add a New Quote</h2>
-  <div>
-    <input id="newQuoteText" type="text" placeholder="Enter a new quote" />
-    <input id="newQuoteCategory" type="text" placeholder="Enter quote category" />
-    <button onclick="addQuote()">Add Quote</button>
-  </div>
-  <div id="conflictResolutionModal" style="display: none;">
-    <p>A conflict has been detected. Would you like to keep the local version or the server version?</p>
-    <button onclick="keepLocalVersion()">Keep Local</button>
-    <button onclick="keepServerVersion()">Keep Server</button>
-  </div>  
   <script src="script.js"></script>
 </body>
 </html>
