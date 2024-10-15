@@ -17,7 +17,6 @@ function filterQuotes() {
   const filteredQuotes = selectedCategory === "all" 
       ? quotes 
       : quotes.filter(quote => quote.category === selectedCategory);
-
   if (filteredQuotes.length > 0) {
       const randomIndex = Math.floor(Math.random() * filteredQuotes.length);
       displayQuote(filteredQuotes[randomIndex]);
@@ -29,9 +28,7 @@ function filterQuotes() {
 function populateCategories() {
   const categories = [...new Set(quotes.map(quote => quote.category))];
   const categoryFilter = document.getElementById('categoryFilter');
-
   categoryFilter.innerHTML = '<option value="all">All Categories</option>';
-
   categories.forEach(category => {
       const option = document.createElement('option');
       option.value = category;
@@ -58,7 +55,6 @@ function addQuote() {
       alert("Please enter both a quote and a category.");
   }
 }
-
 window.onload = () => {
   populateCategories();
   document.getElementById('newQuote').addEventListener('click', showRandomQuote);
